@@ -1,6 +1,7 @@
-package com.conor.barcodevalidator.endpoints;
+package com.conor.barcodevalidator.unit.endpoints;
 
 import com.conor.barcodevalidator.domain.service.ValidationFacadeInterface;
+import com.conor.barcodevalidator.endpoints.BarcodeValidatorController;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;

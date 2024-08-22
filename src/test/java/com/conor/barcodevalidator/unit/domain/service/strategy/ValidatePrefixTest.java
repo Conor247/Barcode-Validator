@@ -1,5 +1,6 @@
-package com.conor.barcodevalidator.domain.service.strategy;
+package com.conor.barcodevalidator.unit.domain.service.strategy;
 
+import com.conor.barcodevalidator.domain.service.strategy.ValidatePrefix;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 

@@ -1,6 +1,7 @@
-package com.conor.barcodevalidator.domain.service.strategy;
+package com.conor.barcodevalidator.unit.domain.service.strategy;
 
 import com.conor.barcodevalidator.domain.service.data.JsonReaderInterface;
+import com.conor.barcodevalidator.domain.service.strategy.ValidateCheckDigit;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
@@ -42,9 +43,7 @@ class ValidateCheckDigitTest {
     @ParameterizedTest
     @ValueSource(strings = {
             "473224829",
-            "473224821",
-            "47322482A",
-            "BCDSDEFGA"
+            "473224821"
     })
     void validateS10CheckDigitFailsTest(String serialCheck) throws IOException {
         when(jsonReader.readWeightsFromFile()).thenReturn(WEIGHTS);
@@ -58,7 +57,9 @@ class ValidateCheckDigitTest {
             "12345678",
             "22",
             "",
-            "        "
+            "        ",
+            "47322482A",
+            "BCDSDEFGA"
     })
     void validateS10CheckDigitLengthFailsTest(String serialCheck) throws IOException {
         assertFalse(validateCheckDigit.validateS10(serialCheck));

@@ -1,5 +1,6 @@
-package com.conor.barcodevalidator.domain.service.data;
+package com.conor.barcodevalidator.unit.domain.service.data;
 
+import com.conor.barcodevalidator.domain.service.data.JsonReader;
 import org.junit.jupiter.api.Test;
 
 import java.io.IOException;

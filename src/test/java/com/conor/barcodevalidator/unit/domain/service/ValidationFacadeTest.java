@@ -1,5 +1,6 @@
-package com.conor.barcodevalidator.domain.service;
+package com.conor.barcodevalidator.unit.domain.service;
 
+import com.conor.barcodevalidator.domain.service.ValidationFacade;
 import com.conor.barcodevalidator.domain.service.strategy.ValidationStrategyInterface;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
