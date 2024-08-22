@@ -1,0 +1,14 @@
+services:
+  barcode-validator:
+    image: barcode-validator:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 8084:8084
+    networks:
+      - barcode-validator-network
+
+networks:
+  barcode-validator-network:
+    driver: bridge
