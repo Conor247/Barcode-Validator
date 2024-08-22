@@ -1,6 +1,6 @@
 package com.conor.barcodevalidator.domain.service.strategy;
 
-import com.conor.barcodevalidator.domain.service.data.reader.JsonReaderInterface;
+import com.conor.barcodevalidator.domain.service.data.JsonReaderInterface;
 import org.springframework.stereotype.Service;
 
 import java.io.IOException;

@@ -1,4 +1,4 @@
-package com.conor.barcodevalidator.domain.service.data.reader;
+package com.conor.barcodevalidator.domain.service.data;
 
 import org.junit.jupiter.api.Test;
 

@@ -1,6 +1,6 @@
 package com.conor.barcodevalidator.domain.service.strategy;
 
-import com.conor.barcodevalidator.domain.service.data.reader.JsonReaderInterface;
+import com.conor.barcodevalidator.domain.service.data.JsonReaderInterface;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;

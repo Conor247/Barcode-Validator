@@ -1,6 +1,6 @@
-package com.conor.barcodevalidator.domain.service.data.reader;
+package com.conor.barcodevalidator.domain.service.data;
 
-import com.conor.barcodevalidator.domain.service.data.Weights;
+import com.conor.barcodevalidator.domain.model.Weights;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.stereotype.Service;
 

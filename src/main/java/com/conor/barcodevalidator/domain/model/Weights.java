@@ -1,4 +1,4 @@
-package com.conor.barcodevalidator.domain.service.data;
+package com.conor.barcodevalidator.domain.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;

@@ -1,4 +1,4 @@
-package com.conor.barcodevalidator.domain.service.data.reader;
+package com.conor.barcodevalidator.domain.service.data;
 
 import java.io.IOException;
 import java.util.List;
