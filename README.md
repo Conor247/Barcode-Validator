@@ -4,8 +4,8 @@ Spring Web Application that validates S10 (UPU standard) barcodes.
 ## Technical Features
 
 ### Strategy Pattern
-* Each algorithm is encapsulated in its own class, promoting separation of concerns.
-* Algorithms can be tested individually.
+* Each validation is encapsulated in its own class, promoting separation of concerns.
+* The validations can be tested individually.
 
 ### Facade Pattern
 * Provides a simplified interface to a complex subsystem.
