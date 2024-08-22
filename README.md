@@ -31,7 +31,7 @@ Open a bash terminal at the project directory and use the following commands to 
 ```bash
 ./gradlew test
 ````
-* Run all JUnit tests.
+* Run all JUnit and Integration tests.
 
 ```bash
 ./gradlew pitest
