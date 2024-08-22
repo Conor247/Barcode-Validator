@@ -20,23 +20,17 @@ public class ValidateCheckDigit implements ValidationStrategyInterface {
 
     @Override
     public boolean validateS10(String serialCheck) throws IOException {
-
-        try {
-            if (serialCheck == null || serialCheck.length() != 9) {
-                throw new IllegalArgumentException("The serialCheck string must be exactly 9 characters long.");
-            }
-
+        if (isValidSerialCheck(serialCheck)) {
             String serialNum = serialCheck.substring(0, 8);
             String checkDigit = serialCheck.substring(8);
 
-            return checkDigit.equals(
-                    String.valueOf(
-                            calculateCheckDigit(serialNum)
-                    )
-            );
-        } catch (IllegalArgumentException e) {
-            return false;
+            return checkDigit.equals(String.valueOf(calculateCheckDigit(serialNum)));
         }
+        return false;
+    }
+
+    private boolean isValidSerialCheck(String serialCheck) {
+        return serialCheck != null && serialCheck.matches("^\\d{9}$");
     }
 
     private List<Integer> convertToList(String numberString) {

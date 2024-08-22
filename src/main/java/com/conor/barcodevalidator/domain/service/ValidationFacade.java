@@ -25,14 +25,23 @@ public class ValidationFacade implements ValidationFacadeInterface {
     }
 
     public boolean validateS10Barcode(String barcode) throws IOException {
-        String prefix = barcode.substring(0, 2);
-        String serial = barcode.substring(2, 10);
-        String serialCheckDigit = barcode.substring(2, barcode.length() - 2);
-        String countryCode = barcode.substring(barcode.length() - 2);
+        try {
+            if (barcode == null || barcode.length() != 13) {
+                throw new IllegalArgumentException("The barcode string must be exactly 13 characters long.");
+            }
 
-        return validatePrefix.validateS10(prefix) &&
-               validateSerialNumber.validateS10(serial) &&
-               validateCheckDigit.validateS10(serialCheckDigit) &&
-               validateCountryCode.validateS10(countryCode);
+            String prefix = barcode.substring(0, 2);
+            String serial = barcode.substring(2, 10);
+            String serialCheckDigit = barcode.substring(2, barcode.length() - 2);
+            String countryCode = barcode.substring(barcode.length() - 2);
+
+            return validatePrefix.validateS10(prefix) &&
+                    validateSerialNumber.validateS10(serial) &&
+                    validateCheckDigit.validateS10(serialCheckDigit) &&
+                    validateCountryCode.validateS10(countryCode);
+        } catch (IllegalArgumentException e) {
+            return false;
+        }
     }
 }
+
