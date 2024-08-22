@@ -40,26 +40,28 @@ Open a bash terminal at the project directory and use the following commands to 
 
 # Running
 
-Open a bash terminal at the project directory and use the following commands to set up your environment.
+Open a bash terminal at the project directory and use the following commands to run it.
+
+### In Docker
+
 ```bash
-./gradlew clean build
+./RunInDocker.sh
 ````
-* Ensures a clean build of the WebApp.
 
-```bash
-docker-compose up --build
-```
-* This will create the docker image, volume and container.
-
-```bash
-docker-compose up -d
-```
-* Start the existing docker images.
+* This will build and run the WebApp.
 
 ```bash
 docker-compose down
 ```
 * Stop and remove Docker containers, networks, volumes, and images created by the docker-compose script.
+
+### In Local Environment
+
+```bash
+./gradlew clean build
+````
+* Ensures a clean build of the WebApp.
+
 ```bash
 ./gradlew bootRun
 ```
