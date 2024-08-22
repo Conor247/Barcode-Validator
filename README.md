@@ -12,6 +12,10 @@ Spring Web Application that validates S10 (UPU standard) barcodes.
 * Clients are decoupled from the subsystem.
 * Organises the code by grouping related functionalities into a single class.
 
+#### Assumptions
+* The Weights may or may not change, so I stored them in a json file. If they require changes, a complete rebuild and deploy is not necessary.
+* I assume the modulus 11 won't change in the check digit algorithm.
+
 ## Prerequisites
 
 To run the project you will need to have the following installed
