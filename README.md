@@ -15,6 +15,7 @@ Spring Web Application that validates S10 (UPU standard) barcodes.
 #### Assumptions
 * The Weights may or may not change, so I stored them in a json file. If they require changes, a complete rebuild and deploy is not necessary.
 * I assume the modulus 11 won't change in the check digit algorithm.
+* I assume the endpoint is only required to return a boolean as valid/invalid is all a user really needs to know when validating barcodes.
 
 ## Prerequisites
 
