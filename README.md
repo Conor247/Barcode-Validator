@@ -19,12 +19,9 @@ Spring Web Application that validates S10 (UPU standard) barcodes.
 
 ## Prerequisites
 
-Required to be installed
+The following are only required if running locally. Running in docker does not require these to be installed on your machine.
 
 * Java 17
-
-Optional
-
 * Docker
 
 # Testing
