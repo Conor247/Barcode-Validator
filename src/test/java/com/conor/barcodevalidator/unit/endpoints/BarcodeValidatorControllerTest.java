@@ -1,6 +1,6 @@
 package com.conor.barcodevalidator.unit.endpoints;
 
-import com.conor.barcodevalidator.domain.service.ValidationFacadeInterface;
+import com.conor.barcodevalidator.domain.service.ValidationFacade;
 import com.conor.barcodevalidator.endpoints.BarcodeValidatorController;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -18,7 +18,7 @@ import static org.mockito.Mockito.when;
 class BarcodeValidatorControllerTest {
 
     @Mock
-    ValidationFacadeInterface validationFacade;
+    ValidationFacade validationFacade;
     @InjectMocks
     BarcodeValidatorController barcodeValidatorController;
     @Test

@@ -1,6 +1,6 @@
 package com.conor.barcodevalidator.endpoints;
 
-import com.conor.barcodevalidator.domain.service.ValidationFacadeInterface;
+import com.conor.barcodevalidator.domain.service.ValidationFacade;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RestController;
@@ -10,9 +10,9 @@ import java.io.IOException;
 @RestController
 public class BarcodeValidatorController {
 
-    private final ValidationFacadeInterface validationFacade;
+    private final ValidationFacade validationFacade;
 
-    public BarcodeValidatorController(ValidationFacadeInterface validationFacade) {
+    public BarcodeValidatorController(ValidationFacade validationFacade) {
         this.validationFacade = validationFacade;
     }
 

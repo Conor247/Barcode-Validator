@@ -1,6 +1,6 @@
 package com.conor.barcodevalidator.domain.service.strategy;
 
-import com.conor.barcodevalidator.domain.service.data.JsonReaderInterface;
+import com.conor.barcodevalidator.domain.service.data.JsonReader;
 import org.springframework.stereotype.Service;
 
 import java.io.IOException;
@@ -12,9 +12,9 @@ import java.util.stream.IntStream;
 public class ValidateCheckDigit implements ValidationStrategyInterface {
 
     private static final int MODULUS = 11;
-    private final JsonReaderInterface jsonReader;
+    private final JsonReader jsonReader;
 
-    public ValidateCheckDigit(JsonReaderInterface jsonReader) {
+    public ValidateCheckDigit(JsonReader jsonReader) {
         this.jsonReader = jsonReader;
     }
 

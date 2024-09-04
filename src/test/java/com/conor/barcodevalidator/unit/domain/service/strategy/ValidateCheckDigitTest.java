@@ -1,6 +1,6 @@
 package com.conor.barcodevalidator.unit.domain.service.strategy;
 
-import com.conor.barcodevalidator.domain.service.data.JsonReaderInterface;
+import com.conor.barcodevalidator.domain.service.data.JsonReader;
 import com.conor.barcodevalidator.domain.service.strategy.ValidateCheckDigit;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -22,7 +22,7 @@ class ValidateCheckDigitTest {
     private static final List<Integer> WEIGHTS = Arrays.asList(8, 6, 4, 2, 3, 5, 9, 7);
 
     @Mock
-    private JsonReaderInterface jsonReader;
+    private JsonReader jsonReader;
 
     @InjectMocks
     private ValidateCheckDigit validateCheckDigit;
