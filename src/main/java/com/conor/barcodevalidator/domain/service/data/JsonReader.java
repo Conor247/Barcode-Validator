@@ -9,7 +9,7 @@ import java.io.IOException;
 import java.util.List;
 
 @Service
-public class JsonReader implements JsonReaderInterface {
+public class JsonReader {
 
     public List<Integer> readWeightsFromFile() throws IOException {
         ObjectMapper objectMapper = new ObjectMapper();
